@@ -8,26 +8,26 @@ Some aspects of the Semantic Web have already been developed as specifications a
 
 ## Schedule
 
-Week 1  Introduction
-        Ontologies    
-Week 2  Ontological Representation    
-        Metadata      
-Week 3  RDF Models    
-        RDF Data Structures   
-Week 4  RDFS      
-        Query: SPARQL + SQL       
-Week 5  Linked open data      
-        Description Logics, OWL   
-Week 6  Innovative Learning Week   
-Week 7  Ontology Matching     
-        The programmable Web      
-Week 8  Web services  
-        Web Services
-Week 9  Agency    
-        Agent Coordination
-Week 10 Guest lecture       
-        Agent coordination
-Week 11 Revision      
-        No lecture
+| Week 1 | Introduction |
+|        | Ontologies |
+| Week 2 | Ontological Representation |
+|        | Metadata |
+| Week 3 | RDF Models |
+|        | RDF Data Structures |
+| Week 4 | RDFS |
+|        | Query: SPARQL + SQL |
+| Week 5 | Linked open data |
+|        | Description Logics, OWL |
+| Week 6 | Innovative Learning Week |
+| Week 7 | Ontology Matching |
+|        | The programmable Web |
+| Week 8 | Web services |
+|        | Web Services |
+| Week 9 | Agency |
+|        | Agent Coordination |
+| Week 10| Guest lecture |
+|        | Agent coordination |
+| Week 11| Revision |
+|        | No lecture |
 
 ## Coursework
