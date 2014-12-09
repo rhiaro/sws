@@ -55,7 +55,7 @@ Ontology rules? (I don't know anything about this, should learn).
 Everyone should publish their own foaf file and link to each other, minimum hosted on uni webspace, bonus points for somewhere with conneg.
 
 Mashup existing prominent LD sets.
- (esw.w3.org/topic/TaskForces/CommunityProjects/LinkingOpenData/DataSets)
+ (http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/DataSets/CKANmetainformation)
 
 Convert a non-LD dataset.
 
