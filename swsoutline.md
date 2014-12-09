@@ -8,6 +8,8 @@ Some aspects of the Semantic Web have already been developed as specifications a
 
 ## Schedule
 
+| Week   | Topic |
+| ------ | ----- |
 | Week 1 | Introduction |
 |        | Ontologies |
 | Week 2 | Ontological Representation |
