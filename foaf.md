@@ -59,7 +59,7 @@ Add `foaf:knows` links to the URIs of other people you know in the SWS class who
 
 ## Bonus: content negotiation
 
-I think you can put a `.htaccess` file in your homepages web root. If so, you can use this to return something different depending on the HTTP request.
+You can put a `.htaccess` file in your homepages web root. You can use this to return something different depending on the HTTP request.
 
 * If a human navigates to your URI (`http://homepages.inf.ed.ac.uk/~your-student-id/me`) in a browser, they probably don't want to see RDF. So you can return HTML instead, that will be rendered by the browser. This could be just a nice view of the contents of your FOAF profile, or anything you want.
 
