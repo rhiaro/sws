@@ -36,6 +36,9 @@ Access control.
 Discovery.
 ..
 
+Populating SW
+Natural language, machine learning.
+
 Guests:
 Linked data in academia.
 Linked data in industry (BBC).
