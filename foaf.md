@@ -43,9 +43,7 @@ If the external URIs in my FOAF profile are valid and set up correctly, an agent
 
 ## URIs
 
-I made a URI for myself: `http://rhiaro.co.uk/about#me`. The domain is under my control, so I can make sure that it returns something appropriate to a browser or a script. If you own your own domain name, you can use that. But if not, you've always got http://homepages.inf.ed.ac.uk/~your-student-id#id
-
-[Read about hash URIs](#).
+I made a URI for myself: `http://rhiaro.co.uk/about#me`. The domain is under my control, so I can make sure that it returns something appropriate to a browser or a script. If you own your own domain name, you can use that. But if not, you've always got `http://homepages.inf.ed.ac.uk/your-student-id/me`.
 
 ## Publishing your profile
 
@@ -53,26 +51,35 @@ Once you've picked a URI, write a FOAF profile in your favourite text editor. Yo
 
 Save it as `foaf.ttl`. You can put it on the server space provided to you by Informatics, by dumping it in the `/public/homepages/<user>/web` folder on your DICE machine.
 
-Now when you visit (or `curl`) `http://homepages.inf.ed.ac.uk/~your-student-id/foaf.ttl` your triples will be returned!
+Now when you visit `http://homepages.inf.ed.ac.uk/your-student-id/foaf.ttl` your triples will be returned!
+
+## Bonus: linking with your friends
+
+Add `foaf:knows` links to the URIs of other people you know in the SWS class who have set up their FOAF profiles. Then we can visualise the lot of you. (If you don't know anyone else in the class, you can either talk to someone in the next lecture and get their URI, or link to: `http://homepages.inf.ed.ac.uk/s1158216/me`).
 
 ## Bonus: content negotiation
 
 I think you can put a `.htaccess` file in your homepages web root. If so, you can use this to return something different depending on the HTTP request.
 
-* If a human navigates to your homepage (`http://homepages.inf.ed.ac.uk/~your-student-id/`) in a browser, they probably don't want to see RDF. So you can return HTML instead, that will be rendered by the browser. This could be just a nice view of the contents of your FOAF profile, or anything you want.
+* If a human navigates to your URI (`http://homepages.inf.ed.ac.uk/~your-student-id/me`) in a browser, they probably don't want to see RDF. So you can return HTML instead, that will be rendered by the browser. This could be just a nice view of the contents of your FOAF profile, or anything you want.
 
-* If a linked-data-traversing software agent vists your homepage, they'll probably send the (for example) `Accept: text/turtle` header, indicating they want RDF. So to them, you can return your `foaf.ttl` file.
+* If a linked-data-traversing software agent dereferences your URI, they'll probably send the (for example) `Accept: text/turtle` header, indicating they want RDF. So to them, you can return your `foaf.ttl` file.
 
 ```
 RewriteEngine on
+RewriteBase /your-student-id
 
-# Serve foaf.ttl when some form of RDF is requested
-RewriteCond %{HTTP_ACCEPT} ^.*text/turtle.* [OR]
-RewriteCond %{HTTP_ACCEPT} ^.*application/rdf\+xml.* [OR]
-RewriteCond %{HTTP_ACCEPT} ^.*rdf/xml.*
-RewriteRule ^/$ foaf.ttl [R=303,L]
+# Serve foaf.ttl when RDF (turtle) is requested
+RewriteCond %{HTTP_ACCEPT} ^.*text/turtle.*
+RewriteRule ^me$ foaf.ttl [R=303,L]
 
 # Serve html by default 
-RewriteRule ^/$ profile.html [R=303,L]
+RewriteRule ^me$ profile.html [R=303,L]
 
 ```
+
+Save this as `.htaccess` in your `/web` folder alongside your `foaf.ttl` file and don't forget to create `profile.html` as well.
+
+Now try visiting `http://homepages.inf.ed.ac.uk/your-student-id/me` in a browser. You should be redirected to `profile.html`.
+
+Now try `curl -L -H "Accept: text/turtle" http://homepages.inf.ed.ac.uk/your-student-id/me` at the command line. Your RDF should be returned. (The `-L` flag tells `curl` to follow redirects and the `-H` flag lets you pass the Accept header).
