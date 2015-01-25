@@ -2,6 +2,8 @@
 
 ## Metadata 
 
+*Note: [Slides from the SWS Metadata lecture](http://www.inf.ed.ac.uk/teaching/courses/sws/lectures-15/SWS-04-Metadata.pdf)*
+
 1. Think of your favourite book. If you can't think of one, pick something off the [SWS reading list](http://www.inf.ed.ac.uk/teaching/courses/sws/#course-info).
 
 2. Take a look at the [Dublin Core documentation](http://purl.org/dc/terms/) and the [Guidelines for encoding bibliographic information with Dublin Core](http://dublincore.org/documents/dc-citation-guidelines/).
@@ -13,6 +15,7 @@
     * dc = http://purl.org/dc/terms/creator/
     * dctype = http://purl.org/dc/dcmitype/
     
+
     | Dublin Core term | Value |
     | ---------------- | ----- |
     | dc:title | "Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web by its inventor" |
@@ -31,3 +34,5 @@
     <http://dbpedia.org/resource/Weaving_the_Web> dc:type <dctype:PhysicalObject> .
     <http://dbpedia.org/resource/Weaving_the_Web> dc:publisher <http://dbpedia.org/resource/Harper_(publisher)> .
     ```
+
+5. Save your turtle in a file called `book.ttl` and publish it in your UoE webspace by copying it in the `/public/homepages/<user>/web` folder on your DICE machine. Now when you visit `http://homepages.inf.ed.ac.uk/your-student-id/book.ttl` you'll see your triples (although some/most browsers will try to force you to download the file).
