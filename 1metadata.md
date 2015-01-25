@@ -8,10 +8,10 @@
 
 3. Write down as much metadata about your book as possible using Dublin Core terms, and note the Dublin Core namespaces you use. Eg:
 
-*Namespaces:**
+**Namespaces:**
 
-dc = http://purl.org/dc/terms/creator/
-dctype = http://purl.org/dc/dcmitype/
+* dc = http://purl.org/dc/terms/creator/
+* dctype = http://purl.org/dc/dcmitype/
 
 | Dublin Core term | Value |
 | ---------------- | ----- |
