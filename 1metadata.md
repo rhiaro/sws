@@ -8,8 +8,8 @@
 
 3. Write down as much metadata about your book as possible using Dublin Core terms, and note the Dublin Core namespaces you use. Eg:
 
-```
-Namespaces:
+*Namespaces:**
+
 dc = http://purl.org/dc/terms/creator/
 dctype = http://purl.org/dc/dcmitype/
 
@@ -17,7 +17,7 @@ dctype = http://purl.org/dc/dcmitype/
 | dc:creator | "Tim Berners-Lee" |
 | dc:type | dctype:PhysicalObject |
 | dc:publisher | "Harper Publications" |
-```
+
 
 2. Look through your metadata and identify entities that ought to have a unique identifier of their own, not forgetting the book itself. Create a unique identifier (ie. URI) for your book; you can make up your own, or see if you can find it somewhere like [DBPedia](http://dbpedia.org). Replace other values that are strings (aka Literals) with URIs as appropriate, eg (the following is in the [Turtle](http://www.w3.org/TR/turtle/) syntax of RDF):
 
