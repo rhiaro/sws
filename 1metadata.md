@@ -13,6 +13,8 @@
 dc = http://purl.org/dc/terms/creator/
 dctype = http://purl.org/dc/dcmitype/
 
+| Dublin Core term | Value |
+| ---------------- | ----- |
 | dc:title | "Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web by its inventor" |
 | dc:creator | "Tim Berners-Lee" |
 | dc:type | dctype:PhysicalObject |
