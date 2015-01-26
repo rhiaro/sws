@@ -40,4 +40,7 @@
 
 6. Validate your turtle to check it is syntactically correct. There are many validators, you could try [this one](http://rdf-translator.appspot.com/) ('translate' from N3 to N3). Fix any syntax errors that may occur.
 
+7. Email a link to your turtle file to P.Pareti@sms.ed.ac.uk. 
+
+
 *Note about DBPedia URIs: When you visit a DBPedia URI you are redirect to a /page/ address. This is the URI for the webpage, not the thing the page is about. Use /resource/ in place of /page/ for the URI of the thing.*
