@@ -38,6 +38,13 @@
     - http://lod.openlinksw.com/sparql/ (not sure what's in here)
     - See what's alive at http://www.w3.org/wiki/SparqlEndpoints
 * Interactive SPARQL query builder http://demo.openlinksw.com/isparql/
+* https://semanticwebrecipes.wordpress.com/2014/07/24/accessing-linked-data-api-with-javascript/
+* http://dailyjs.com/2010/11/26/linked-data-and-javascript/
+
+## Manipulating
+
+* Ruben Verorgh's JS library http://ruben.verborgh.org/blog/2013/04/30/lightning-fast-rdf-in-javascript/
+* 
 
 ## Random interesting projects
 
@@ -50,3 +57,4 @@
 
 * Linked Data Fragments
 * Linked Data Platform 
+* Linked Data Laundromat
