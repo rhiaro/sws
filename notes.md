@@ -49,7 +49,7 @@ Blank nodes / reification / named graphs.
 
 Inference.
 
-Syntaxes.
+Syntaxes. (inc JSON-LD)
 
 Ontology rules? (I don't know anything about this, should learn).
 
@@ -66,3 +66,5 @@ Convert a non-LD dataset.
 
 * Weaving the Web
 * linkeddatabook.com
+
+http://www.w3.org/blog/news/archives/4291
