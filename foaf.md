@@ -45,23 +45,27 @@ If the external URIs in my FOAF profile are valid and set up correctly, an agent
 
 I made a URI for myself: `http://rhiaro.co.uk/about#me`. The domain is under my control, so I can make sure that it returns something appropriate to a browser or a script. If you own your own domain name, you can use that. But if not, you've always got `http://homepages.inf.ed.ac.uk/your-student-id/me`.
 
+**Note:** Your URI is _not_ the URL of a file (the URL of a file is the URI of the _file_). Because you personally cannot be fetched over HTTP, your URI doesn't need to return anything (fragment # URIs or content negotation (below) are the alterntatives).
+
 ## Publishing your profile
 
 Once you've picked a URI, write a FOAF profile in your favourite text editor. You can amend the one above. You could add links, using the correct ontology terms and URIs, to topics you're interested in, places you've travelled, books you've read. All of these links can be traversed to build up a fuller picture, without you having to publish all of the data yourself; you only need to create the connections.
 
 Save it as `foaf.ttl`. You can put it on the server space provided to you by Informatics, by dumping it in the `/public/homepages/<user>/web` folder on your DICE machine.
 
-Now when you visit `http://homepages.inf.ed.ac.uk/your-student-id/foaf.ttl` your triples will be returned!
+Now when you visit `http://homepages.inf.ed.ac.uk/your-student-id/foaf.ttl` your triples will be returned (or mangled by the browser - try view-source if they look weird)!
 
-## Bonus: linking with your friends
+## Linking with your friends
 
 Add `foaf:knows` links to the URIs of other people you know in the SWS class who have set up their FOAF profiles. Then we can visualise the lot of you. (If you don't know anyone else in the class, you can either talk to someone in the next lecture and get their URI, or link to: `http://homepages.inf.ed.ac.uk/s1158216/me`).
 
-## Bonus: content negotiation
+## Content negotiation
 
 You can put a `.htaccess` file in your homepages web root. You can use this to return something different depending on the HTTP request.
 
-* If a human navigates to your URI (`http://homepages.inf.ed.ac.uk/your-student-id/me`) in a browser, they probably don't want to see RDF. So you can return HTML instead, that will be rendered by the browser. This could be just a nice view of the contents of your FOAF profile, or anything you want.
+* If a human navigates to your URI (`http://homepages.inf.ed.ac.uk/your-student-id/me`) in a browser, you're not going to be sucked over the internet to come out of their browser. The **303 redirect** says "what your requested isn't available, here's a descriptive document instead".
+
+* Humans probably don't want to see RDF either. So you can return HTML instead, that will be rendered by the browser. This could be just a nice view of the contents of your FOAF profile, or anything you want.
 
 * If a linked-data-traversing software agent dereferences your URI, they'll probably send the (for example) `Accept: text/turtle` header, indicating they want RDF. So to them, you can return your `foaf.ttl` file.
 
@@ -78,8 +82,14 @@ RewriteRule ^me$ profile.html [R=303,L]
 
 ```
 
-Save this as `.htaccess` in your `/web` folder alongside your `foaf.ttl` file and don't forget to create `profile.html` as well.
+Save this as `.htaccess` in your `/web` folder alongside your `foaf.ttl` file and don't forget to create `profile.html` as well (see [http://homepages.inf.ed.ac.uk/s1158216/profile.html](mine) for an example).
 
 Now try visiting `http://homepages.inf.ed.ac.uk/your-student-id/me` in a browser. You should be redirected to `profile.html`.
 
 Now try `curl -L -H "Accept: text/turtle" http://homepages.inf.ed.ac.uk/your-student-id/me` at the command line. Your RDF should be returned. (The `-L` flag tells `curl` to follow redirects and the `-H` flag lets you pass the Accept header).
+
+## Submission
+
+Validate your foaf file check it is syntactically correct. There are many validators, you could try [this one](http://rdf-translator.appspot.com/) ('translate' from N3 to N3). Fix any syntax errors that may occur.
+
+Email a link to your turtle file to P.Pareti@sms.ed.ac.uk. 
