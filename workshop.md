@@ -1,60 +1,29 @@
-# Linked Data funtimes
+# Linked Data workshop
+
+## Coreference
+
+* ["When owl:sameAs isn't the same"](http://www.w3.org/2009/12/rdf-ws/papers/ws21)
+* [sameAs.org](http://sameas.org/)
 
 ## Ontology authoring / editing
 
-* webprotege
+* [WebProtege](webprotege.stanford.edu)
 
 ## Visualisation / browsing
 
-* that visualisor
-* LODE for OWL file docs http://www.essepuntato.it/lode
-* Tabulator - does this work? FF extension http://www.w3.org/2005/ajar/tab
-* Marbles - still a thing?? http://wiki.dbpedia.org/Marbles?v=71e
-* Graphite-based browser (Graphite is a fab PHP library) http://graphite.ecs.soton.ac.uk/browser/
-
-## Conversion
-
-* Open Refine
-* Virtuoso Sponger http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtSponger
-* https://code.google.com/p/any23/
+* [RelFinder](http://www.visualdataweb.org/relfinder/relfinder.php) or [RelFinder alternative](http://factforge.net/relfinder)
+* [VOWL](http://vowl.visualdataweb.org/webvowl/index.html)
+* [LODE for OWL file documentation](http://www.essepuntato.it/lode)
+* [Graphite-based browser](http://graphite.ecs.soton.ac.uk/browser/) (Graphite itself is a PHP library) 
 
 ## Validators
 
 * http://validator.linkeddata.org/vapour
 
-## Storage
-
-* triplestores..? Anything already set up we can use?
-* Flat files - FOAF exercise?
-
-## Searching
-
-* Which of these up to date? http://www.w3.org/wiki/TaskForces/CommunityProjects/LinkingOpenData/SemanticWebSearchEngines
-
 ## Querying
 
 * SPARQL endpoints
-    - DBpedia
-    - http://lod.openlinksw.com/sparql/ (not sure what's in here)
-    - See what's alive at http://www.w3.org/wiki/SparqlEndpoints
+    - [DBpedia](http://dbpedia.org:8890/sparql)
+    - [FactForge](http://factforge.net/sparql)
+    - [OpenLink](http://lod.openlinksw.com/sparql/)
 * Interactive SPARQL query builder http://demo.openlinksw.com/isparql/
-* https://semanticwebrecipes.wordpress.com/2014/07/24/accessing-linked-data-api-with-javascript/
-* http://dailyjs.com/2010/11/26/linked-data-and-javascript/
-
-## Manipulating
-
-* Ruben Verorgh's JS library http://ruben.verborgh.org/blog/2013/04/30/lightning-fast-rdf-in-javascript/
-* 
-
-## Random interesting projects
-
-* Revyu - LD reviews http://revyu.com/
-* sameAs http://sameas.org/
-* bbc.co.uk/things
-* 
-
-## Bleeding edge
-
-* Linked Data Fragments
-* Linked Data Platform 
-* Linked Data Laundromat
